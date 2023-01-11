@@ -49,7 +49,7 @@ Darker = 0.15
 Black = 0.
 
 
-def add_layer(patches, colors, size=(24, 24), num=5,
+def add_layer(patches, colors, size=(24, 24), num=6,
               top_left=[0, 0],
               loc_diff=[3, -3],
               ):
@@ -149,8 +149,9 @@ if __name__ == '__main__':
 
     ############################
     # conv layers
-    size_list = [(32, 32), (18, 18), (10, 10), (6, 6), (4, 4)]
-    num_list = [3, 32, 32, 48, 48]
+    size_list = [(256, 256), (254, 254), (127, 127),
+                 (125, 125), (62, 62)]
+    num_list = [3, 16, 16, 32, 32]
     x_diff_list = [0, layer_width, layer_width, layer_width, layer_width]
     text_list = ['Inputs'] + ['Feature\nmaps'] * (len(size_list) - 1)
     loc_diff_list = [[3, -3]] * len(size_list)
